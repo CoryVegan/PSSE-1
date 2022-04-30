@@ -51,7 +51,6 @@ Una vez identificada la versión de _Python_ que se tiene instalada, (de acuerdo
 `python -m ipykernel install --user`
 
 ```
-
 C:\Python27>python -m pip install ipykernel
 
 C:\Python27>python -m ipykernel --user
