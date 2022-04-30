@@ -47,6 +47,7 @@ Una vez identificada la versión de _Python_ que se tiene instalada, (de acuerdo
 1. En la línea de comandos dirígete a la carpeta donde se instala la versión de _Python_ con la que vas a trabajar (en nuestro caso es la 2.7) y ejecuta los comandos:
 
 `python -m pip install ipykernel`
+
 `python -m ipykernel install --user`
 
 ```
