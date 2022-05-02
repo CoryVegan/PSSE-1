@@ -44,11 +44,15 @@ Por ejemplo, si se trabaja con _Python_ `2.7` habrá que utilizar (importar) la 
 
 Una vez identificada la versión de _Python_ que se tiene instalada, (de acuerdo con la versión de _PSS/E_ que se encuentra en tu equipo), se debe instalar el paquete que permite la utilización de _Jupyter Note Books_. En la documentación de _IPython_ [(ver aquí)](https://ipython.readthedocs.io/en/stable/install/kernel_install.html) se menciona que las nuevas versiones de esta paquetería (6.0 en adelante) ya no soportan versiones inferiores a _Python 3.3_, por esta razón se debe instalar una versión compatible IPython, de la familia 5.X. Para hacer esto sigue los siguientes pasos:
 
-1. En la línea de comandos dirígete a la carpeta donde se instala la versión de _Python_ con la que vas a trabajar (en nuestro caso es la 2.7) y ejecuta el comando:
+1. En la línea de comandos dirígete a la carpeta donde se instala la versión de _Python_ con la que vas a trabajar (en nuestro caso es la 2.7) y ejecuta los comandos:
+
+`python -m pip install ipykernel`
 
 `python -m ipykernel install --user`
 
 ```
+C:\Python27>python -m pip install ipykernel
+
 C:\Python27>python -m ipykernel --user
 
 ```
