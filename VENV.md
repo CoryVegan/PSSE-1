@@ -33,7 +33,7 @@ c:\Python37>
 c:\Python37>python -m venv c:\.venv\pss
 ```
 
-Donde "c:\.venv\pss" es la ruta donde se quiere instalar el ambiente virtual y ".venv" es solo el nombre de la carpeta que comúnmente se crea para guardar ahí todos los ambientes virtuales, pero puede especificarse en cualquier otra dirección.
+Donde "c:/.venv/pss" es la ruta donde se quiere instalar el ambiente virtual y ".venv" es solo el nombre de la carpeta que comúnmente se crea para guardar ahí todos los ambientes virtuales, pero puede especificarse en cualquier otra dirección.
 
 Con esto se habrán creado todos los archivos necesarios para que esta carpeta se pueda llamar por algún intérprete y funcione correctamente con la versión de _Python_ especificada (3.7 en este caso).
 
