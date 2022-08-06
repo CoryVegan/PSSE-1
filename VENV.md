@@ -58,4 +58,4 @@ Consultar el procedimiento [aquí](https://code.visualstudio.com/docs/python/env
 
 [venv Python.org](https://docs.python.org/es/3/library/venv.html)
 
-[How to Set Up a Virtual Environment in Python – And Why It's Useful] (https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/)
+[How to Set Up a Virtual Environment in Python – And Why It's Useful](https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/)
