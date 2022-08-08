@@ -8,7 +8,7 @@ Con este repositorio se pretende documentar y explicar la forma en que se utiliz
 
 ---
 
-## Herrameintas quese utilizan
+## Herramientas que se utilizan
 
 [Python](https://www.python.org/) 
 
