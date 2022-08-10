@@ -1,5 +1,3 @@
-import os
-import sys
 import psse34
 import psspy
 import redirect
