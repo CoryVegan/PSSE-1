@@ -58,9 +58,12 @@ def comp_enlaces(ENLACES_IN = 0, ENLACES_OUT = 0):
 
   [#FROM_BUS - ID - #TO_BUS, #FROM_BUS - ID - #TO_BUS, ... ]
   
-  Y busca en esa lista los enlaces que se le pidan en la variable ENLACES, la cual debe ser una lista también con la misma estructura. 
+  La función hace dos búsquedas:
+  1. Que se encuentren los enlaces de la variable ENLACES_IN, la cual debe ser una lista también con la misma estructura.
+  2. Que no existan los enlaces de la variable ENLACES_OUT, la cual debe ser una lista también con la misma estructura.
 
   En caso de no haber enlaces "in" o "out" para verificar, se pone un cero '0' en la posición que corresponda. 
+  
   '''
   ierr, ids = psspy.abrnchar(0,1,3,4,2, string=["ID"])
   ierr, numeros = psspy.abrnint(0,1,3,4,2, string=["FROMNUMBER","TONUMBER"])
@@ -126,7 +129,7 @@ def P16_OC2():
 
     print('-----------------------------')
 
-    return 'PEM P16-OC2 revisado'
+    return
 
 def P18_OC9():
     '''
@@ -163,4 +166,4 @@ def P18_OC9():
 
     print('-----------------------------')
 
-    return 'PEM P18-OC9 revisado'
+    return
