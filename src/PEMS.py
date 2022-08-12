@@ -23,9 +23,9 @@ def comp_bus(BUSES):
             if buses_dict[clave].strip() != valor:
               return print('Hay un problema con el Bus: ', clave)
         except:
-            print('El Bus:', clave, 'no existe')
+          print('El Bus:', clave, 'no existe')
         else:
-            print('Bus:', clave, 'ok')
+          return print('Bus:', clave, 'ok')
 
 def comp_shunt(SHUNTS_IN):
   '''
@@ -47,7 +47,7 @@ def comp_shunt(SHUNTS_IN):
             if abs(shunt_dict[clave] - valor) > 1:
               return print('Hay un problema con el Shunt: ', clave)
         except:
-            print('El Shunt:', clave, 'no existe')
+             print('El Shunt:', clave, 'no existe')
         else:
             print('Shunt:', clave, 'ok')
 
@@ -110,21 +110,21 @@ def P16_OC2():
                   No existe el circuito:
                     (LNU-115)33032-73-33036(AYA-115)
     '''
-    # Verificación de Buses
+    print('PEM P16-OC2')
 
+    # Verificación de Buses
     BUSES = {330704:'POS-13.8T4',330803:'LNT-13.8T3'}
-    
     comp_bus(BUSES)
 
     # Verificación de Enlaces
-
     ENLACES_IN = ['33045-OC-33019',
                   '33045-OC-33032',
                   '33045-OC-33036']
 
     ENLACES_OUT = ['33032-73-33036']
-    
     comp_enlaces(ENLACES_IN,ENLACES_OUT)
+
+    print('-----------------------------')
 
     return 'PEM P16-OC2 revisado'
 
@@ -149,7 +149,9 @@ def P18_OC9():
                     34114/NTA-115(OC): 22.5
                     34160/CIM-115(OC): 30.0
                     34112/QRO-115(OC): 15.0
-    '''      
+    '''
+    print('PEM P18-OC9')  
+       
     SHUNTS_IN = {'34043/PQN-115(OC)': 15.0,
                  '34116/QRP-115(OC)': 30.0,
                  '34140/CNI-115(OC)': 22.5,
@@ -158,5 +160,7 @@ def P18_OC9():
                  '34112/QRO-115(OC)': 15.0}
 
     comp_shunt(SHUNTS_IN)
+
+    print('-----------------------------')
 
     return 'PEM P18-OC9 revisado'
