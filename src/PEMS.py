@@ -51,7 +51,6 @@ def comp_shunt(SHUNTS_IN):
         else:
             print('Shunt:', clave, 'ok')
 
-
 def comp_enlaces(ENLACES_IN = 0, ENLACES_OUT = 0):
   '''
   Función que crea una lista con las claves de los enlaces (LT y 2WND-TR):
@@ -88,7 +87,7 @@ def comp_enlaces(ENLACES_IN = 0, ENLACES_OUT = 0):
         else:
             print('Enlace:', clave, 'ok')
   except:
-    print('Lista de ENLACES_IN vacía o con error:',ENLACES_OUT)
+    print('Lista de ENLACES_OUT vacía o con error:',ENLACES_OUT)
 
 # ----------------- Funciones para verificar cada PEM ---------------------------------
 
@@ -163,6 +162,125 @@ def P18_OC9():
                  '34112/QRO-115(OC)': 15.0}
 
     comp_shunt(SHUNTS_IN)
+
+    print('-----------------------------')
+
+    return
+
+def P19_NT1():
+    '''
+    Terranova Banco 2
+    
+    Obras: 
+           TR 230/115 en Terranova
+           
+    Verificación: 
+                  Existe el Bus:
+                    55850:'TER-Y2' 
+    '''
+    print('PEM P19-NT1')
+
+    # Verificación de Buses
+    BUSES = {55850:'TER-Y2'}
+    comp_bus(BUSES)
+
+    print('-----------------------------')
+
+    return
+
+def P17_NT2():
+    '''
+    Nuevo Casas Grandes Banco 3
+    
+    Obras: 
+           TR 230/115 en Nuevo Casas Grandes
+           CAP 30.0 en Nuevo Casas Grandes
+           
+    Verificación: 
+                  Existe el Bus:
+                    55901:'NCG-Y3' 
+    '''
+    print('PEM P17-NT2')
+
+    # Verificación de Buses
+    BUSES = {55901:'NCG-Y3'}
+    comp_bus(BUSES)
+
+    # Verificación de Shunts
+    SHUNTS_IN = {'5536/NCG-115(NT)': 30.0}
+
+    comp_shunt(SHUNTS_IN)
+
+    print('-----------------------------')
+
+    return
+
+def P15_NT1():
+    '''
+    Chihuahua Norte Banco 5
+    
+    Obras: 
+           TR 230/115 en Chihuahua Norte (sustitución de dos de 100 por uno de 300 MVA) + 
+           TR 230/115 en Ávalos (traslado de uno de los bancos de 100 MVA)
+           
+    Verificación: 
+                  Existen Buses:
+                    549970:'CUN-Y5'
+                      5469:'AVL-Y3' 
+    '''
+    print('PEM P15-NT1')
+
+    # Verificación de Buses
+    BUSES = {549970:'CUN-Y5',
+             5469:'AVL-Y3'}
+    comp_bus(BUSES)
+
+    print('-----------------------------')
+
+    return
+
+def P16_NT1():
+    '''
+    Zona La Laguna
+    
+    Obras: 
+           TR 400/115 en Torreón Sur
+           LT Torreón Oriente - California (OBRA CON PROBLEMÁTICAS DE CONSTRUCCIÓN)
+           **LT Torreón Oriente - Abastos (NO INCLUIDA EN PROYECTO ORIGINAL)
+           **LT Torreón Sur entronque Revolución - Allende (NO INCLUIDA EN PROYECTO ORIGINAL)
+           Recalibraciones:
+            Takata - Torreón Sur
+            Takata - Torreón Oriente
+            Torreón Sur - Maniobras Mieleras
+            Maniobras Mieleras - Diagonal
+            Torreón Sur - Torreón Oriente
+           
+    Verificación: 
+                  Existen Buses:
+                    51854:'TRS-Y5'
+                  Existen los circuitos:
+                    (TOT-115)5058-NT-5031(CFN-115)
+                    (TAK-115)5090-NT-5060(TRS-115)
+                    (TAK-115)5090-NT-5058(TOT-115)
+                    (TRS-115)5060-NT-5039(MMI-115)
+                    (DGN-115)5068-NT-5039(MMI-115)
+                    (TOT-115)5058-NT-5060(TRS-115)
+    '''
+    print('PEM P16-NT1')
+
+    # Verificación de Buses
+    BUSES = {51854:'TRS-Y5'}
+    comp_bus(BUSES)
+
+    # Verificación de Enlaces
+    ENLACES_IN = ['5058-NT-5031',
+                  '5090-NT-5060',
+                  '5090-NT-5058',
+                  '5060-NT-5039',
+                  '5068-NT-5039',
+                  '5058-NT-5060']
+
+    comp_enlaces(ENLACES_IN,0)
 
     print('-----------------------------')
 
