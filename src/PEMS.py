@@ -58,8 +58,8 @@ def comp_enlaces(ENLACES_IN = 0, ENLACES_OUT = 0):
   [#FROM_BUS - ID - #TO_BUS, #FROM_BUS - ID - #TO_BUS, ... ]
   
   La función hace dos búsquedas:
-  1. Que se encuentren los enlaces de la variable ENLACES_IN, la cual debe ser una lista también con la misma estructura.
-  2. Que no existan los enlaces de la variable ENLACES_OUT, la cual debe ser una lista también con la misma estructura.
+  1. Que se encuentren los enlaces de la variable ENLACES_IN, la cual debe ser una lista con la forma: [#FROM_BUS - ID - #TO_BUS, #FROM_BUS - ID - #TO_BUS, ... ].
+  2. Que no existan los enlaces de la variable ENLACES_OUT, la cual debe ser una lista con la misma estructura anterior.
 
   En caso de no haber enlaces "in" o "out" para verificar, se pone un cero '0' en la posición que corresponda. 
   
